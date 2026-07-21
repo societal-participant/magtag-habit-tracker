@@ -20,3 +20,15 @@ This repository contains a Habit Tracker app for the Adafruit Magtag (written fo
 ### Configuring Habits
 
 ## Using the Habit Tracker
+
+### Turning It On
+
+### Syncing the Date and Time
+
+### Completing a Habit
+
+### Uncompleting a Habit
+
+### Advancing to a New Day
+
+### Resetting Your Streak Counts

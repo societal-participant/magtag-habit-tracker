@@ -13,6 +13,8 @@ This repository contains a Habit Tracker app for the Adafruit Magtag (written fo
 
 ### Configuring Wi-Fi Date and Time Sync
 
+### Configuring Your Time Zone
+
 ### Configuring Sound Volume
 
 ### Configuring Habits

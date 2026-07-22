@@ -1,5 +1,3 @@
----
-
 <h1 id="maggies-magtag-habit-tracker">Maggie’s MagTag Habit Tracker</h1>
 <p>This repository contains a Habit Tracker app I created for the Adafruit MagTag (written for the 2025 version MagTag).</p>
 <p>See the following topics for information on installing, configuring, and using Maggie’s MagTag Habit Tracker.</p>

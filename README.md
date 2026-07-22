@@ -1,9 +1,15 @@
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
----
-
-<h1 id="maggies-magtag-habit-tracker">Maggie’s MagTag Habit Tracker</h1>
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="maggies-magtag-habit-tracker">Maggie’s MagTag Habit Tracker</h1>
 <p>This repository contains a Habit Tracker app I created for the Adafruit Magtag (written for the 2025 version MagTag).</p>
 <h2 id="about-the-habit-tracker">About the Habit Tracker</h2>
 <p>This habit tracker is designed to track 5 daily habits that you want to keep track of. You can easily scroll and complete daily habits using the onboard buttons. Different sound and light effects are used for each button action.</p>
@@ -107,4 +113,7 @@
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
+</div>
+</body>
 
+</html>

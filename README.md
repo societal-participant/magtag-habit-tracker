@@ -1,17 +1,62 @@
+
 # MagTag Habit Tracker
 This repository contains a Habit Tracker app for the Adafruit Magtag (written for the 2025 version MagTag). 
 
 ## About the Habit Tracker
-This habit tracker is designed to track 6 or fewer daily habits that you want to keep track of. You can easily scroll and complete actions using the onboard buttons. The habit tracker uses different sound and light effects for each button action. It also uses Wifi to synchronize the date and time so you can track daily streaks for each habit. No Adafruit IO account is needed for this. 
+This habit tracker is designed to track 6 or fewer daily habits that you want to keep track of. You can easily scroll and complete daily habits using the onboard buttons. Different sound and light effects are used for each button action. 
+
+It also uses Wifi to synchronize the date and time so you can track daily streaks for each habit. No Adafruit IO account is needed for this. 
+
+As you complete your daily habits, the MagTag lights a blue light for each completed habit to indicate your progress. When you complete all your daily habits, the blue lights all turn to gold to help boost your feeling of success for the day.
 
 ### Required Parts
 To build this habit tracker, the following products are needed:
 
  - [Adafruit MagTag Starter Kit](https://www.adafruit.com/product/4819)
+ - [Black Nylon Machine Screw and Stand-off Set – M3 Thread](https://www.adafruit.com/product/4685)
+
+Alternatively, you can purchase parts of the MagTag Starter Kit separately:
+
+ - [Adafruit MagTag - 2.9" Grayscale E-Ink WiFi Display](https://www.adafruit.com/product/4800)
+ - [Mini Magnet Feet for RGB LED Matrices (Pack of 4)](https://www.adafruit.com/product/4631)
+ - [Adafruit MagTag Enclosure & Buttons Kit](https://www.adafruit.com/product/6433)
+ - [Lithium Ion Polymer Battery - 3.7v 500mAh](https://www.adafruit.com/product/1578)
+
 
 ## Installing the Habit Tracker
+The habit tracker was written using CircuitPython 10.0.2 and is supported on MagTag 2025 and later. 
+
+> Note: This habit tracker has not been tested on pre-2025 MagTags.
+
+Prior to installing the habit tracker, CircuitPython 10.0.2 must be installed on your MagTag.
 
 ### Installing Required Libraries
+The following libraries are required for the habit tracker. Copy and paste the folders and files from the latest CircuitPython 10.0.2 installation bundle into the `CIRCUITPY` device's `/lib` folder.
+
+> Note: Several libraries related to Adafruit IO are required in order to use NTP for Wifi syncing, although Adafruit IO is not actually called by the code.
+
+ - adafruit_bitmap_font
+ - adafruit_bus_device
+ - adafruit_display_shapes
+ - adafruit_display_text
+ - adafruit_epd
+ - adafruit_imageload
+ - adafruit_io
+ - adafruit_magtag
+ - adafruit_minimqtt
+ - adafruit_portalbase
+ - adafruit_connection_manager.mpy
+ - adafruit_fakerequests.mpy
+ - adafruit_il0373.mpy
+ - adafruit_ntp.mpy
+ - adafruit_requests.mpy
+ - adafruit_ticks.mpy
+ - neopixel.mpy
+ - simpleio.mpy
+
+Copy and paste these folders and files from the latest CircuitPython 10.0.2 installation bundle into the `CIRCUITPY` device's `/lib` folder.
+
+### Installing Project Files
 
 ## Configuring the Habit Tracker
 

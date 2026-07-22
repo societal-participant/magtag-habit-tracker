@@ -1,10 +1,15 @@
+---
+
+
+---
+
 <h1 id="maggies-magtag-habit-tracker">Maggie’s MagTag Habit Tracker</h1>
 <p>This repository contains a Habit Tracker app I created for the Adafruit MagTag (written for the 2025 version MagTag).</p>
 <p>See the following topics for information on installing, configuring, and using Maggie’s MagTag Habit Tracker.</p>
 <h2 id="about-the-habit-tracker">About the Habit Tracker</h2>
 <p>This habit tracker is designed to track 5 daily habits that you want to keep track of. You can easily scroll and complete daily habits using the onboard buttons. Different sound and light effects are used for each button action.</p>
-<p>It also uses Wifi to synchronize the date and time so you can track daily streaks for each habit. No Adafruit IO account is needed for this.</p>
-<p>As you complete your daily habits, the MagTag lights a blue light for each completed habit to indicate your progress. When you complete all your daily habits, the blue lights all turn to gold to help boost your feeling of success for the day. Each habit also has a daily streak counter for more fun.</p>
+<p>It also uses Wi-Fi to synchronize the date and time so you can track daily streaks for each habit. No Adafruit IO account is needed for this.</p>
+<p>As you complete your daily habits, the MagTag lights a blue light for each completed habit to indicate your progress. When you complete all of your daily habits, the blue lights all turn to gold to help boost your feeling of success for the day. Each habit also has a daily streak counter for even more fun.</p>
 <h3 id="required-parts">Required Parts</h3>
 <p>To build this habit tracker, the following products are needed:</p>
 <ul>
@@ -27,7 +32,7 @@
 <h3 id="installing-required-libraries">Installing Required Libraries</h3>
 <p>The following libraries are required for the habit tracker.</p>
 <blockquote>
-<p>Note: Several libraries related to Adafruit IO are required in order to use NTP for Wifi syncing, although Adafruit IO is not actually called by the code.</p>
+<p>Note: Several libraries related to Adafruit IO are required in order to use NTP for Wi-Fi syncing, although Adafruit IO is not actually called by the code.</p>
 </blockquote>
 <ul>
 <li>adafruit_bitmap_font</li>
@@ -55,7 +60,7 @@
 <h2 id="configuring-the-habit-tracker">Configuring the Habit Tracker</h2>
 <p>To configure the habit tracker, open <code>code.py</code> in a CircuitPython editor, such as <a href="https://codewith.mu/en/download">Mu</a>.</p>
 <p>The habit tracker is configured by editing values in <code>code.py</code>.</p>
-<p>Optionally, <code>secrets.py</code> can be configured to enable Wifi syncing of the date and time. See the following section.</p>
+<p>Optionally, <code>secrets.py</code> can be configured to enable Wi-Fi syncing of the date and time. See the following section.</p>
 <h3 id="configuring-wi-fi-date-and-time-sync">Configuring Wi-Fi Date and Time Sync</h3>
 <p>To enable Wi-Fi date and time sync, do the following:</p>
 <ol>

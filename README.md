@@ -18,7 +18,7 @@
 <li><a href="https://www.adafruit.com/product/1578">Lithium Ion Polymer Battery - 3.7v 500mAh</a></li>
 <li><a href="https://www.adafruit.com/product/4685">Black Nylon Machine Screw and Stand-off Set – M3 Thread</a></li>
 </ul>
-<h2 id="installing-the-habit-tracker">Installing the Habit Tracker</h2>
+<h2 id="installing-the-habit-tracker">Installing the Habit Tracker Files</h2>
 <p>The habit tracker was written using CircuitPython 10.0.2 and is supported on MagTag 2025 and later.</p>
 <blockquote>
 <p>Note: This habit tracker has not been tested on pre-2025 MagTags.</p>

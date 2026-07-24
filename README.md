@@ -93,20 +93,7 @@ secrets = {
 5. Optionally, in the `timezone` field, enter the value for your time zone. If no value is entered, the default UTC is used.
 Time zone values can be found on [this page](https://timeapi.io/documentation/iana-timezones). Copy and paste the **IANA Time Zone** value for your time zone. For example, `America/New_York`. 
 
-> Note: If this file is not created, Wi-Fi syncing will not be enabled. To advance each day, you must hold down the D button for about 1.5 seconds.
-
-### Configuring Your Time Zone
-
-The default time zone used by the app is UTC. The numerical representation of your time zone is needed to ensure that the day changes at the correct time. To find your time zone, go to:  
-[https://www.worldwideclock.com/my-time-zone](https://www.worldwideclock.com/my-time-zone)
-
-To configure your time zone:
-
-1.  Find the `TZ_OFFSET_HOURS` setting.
-2.  After the equals sign, add or change the number for your time zone.
-3.  If the time zone is west of UTC, add a minus sign before the number.
-
-For example, for the Eastern time zone during July Daylight Savings time, the value would equal `-4`. In Autumn when the time changes again, you would change the value to `-5`.
+> Note: If the `secrets.py` file is not created, Wi-Fi syncing will not be enabled. To advance each day, you must hold down the D button for about 1.5 seconds.
 
 ### Configuring Sound Volume
 
@@ -181,6 +168,6 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMTg1NTA5MywtMTc4Njg0MjE0MywtMT
-c2MDAyNDQxMl19
+eyJoaXN0b3J5IjpbLTIwMjg5MzQ0MzAsLTE3ODY4NDIxNDMsLT
+E3NjAwMjQ0MTJdfQ==
 -->

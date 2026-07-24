@@ -105,7 +105,7 @@ HABITS = ["Take Vitamins", "Drink Water", "Exercise", "Stretch"]
 
 The following topics explain how to use the habit tracker.
 
-When pressing the buttons, it's important to consider the e-ink screen refresh rate. For example, if you press a button too soon 
+When pressing the buttons on the MagTag, it's important to consider the e-ink screen refresh rate. For example, if you press a button too soon or while the screen is refreshing, your selection might not be immediately reflected and the screen may need to refresh again.
 
 ### Turning It On
 
@@ -113,7 +113,7 @@ To turn on the habit tracker, toggle the **On/Off** switch to **On**.
 
 ### Syncing the Date and Time
 
-To sync the date and time, press the **A** button. Syncing is typically only necessary if the date displayed on the habit tracker is incorrect.
+To sync the date and time, press the **A** button. Syncing is typically only necessary if the date displayed on the habit tracker is incorrect, for example, if you leave the device off for a period of days.
 
 If the habit tracker wasn’t configured to use Wi-Fi, then nothing happens.
 
@@ -145,7 +145,7 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NDUwNDAzNywtOTMxNTQ0OTU5LDExNT
-cyOTcyMCw1NDY5ODE4NzEsLTE0MjYwNDc5MzksLTE3ODY4NDIx
-NDMsLTE3NjAwMjQ0MTJdfQ==
+eyJoaXN0b3J5IjpbLTE1Njc2NDk1OTYsLTkzMTU0NDk1OSwxMT
+U3Mjk3MjAsNTQ2OTgxODcxLC0xNDI2MDQ3OTM5LC0xNzg2ODQy
+MTQzLC0xNzYwMDI0NDEyXX0=
 -->

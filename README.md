@@ -34,36 +34,10 @@ The habit tracker was written using CircuitPython 10.0.2 and is supported on Mag
 
 Prior to installing the habit tracker, CircuitPython 10.0.2 must be installed on your MagTag. See [Adafruit's page on installing CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython) for information.
 
-### Installing Required Libraries
-
-The following libraries are required for the habit tracker.
-
-> Note: Several libraries related to Adafruit IO are required in order to use NTP for Wi-Fi syncing, although Adafruit IO is not actually called by the code.
-
--   adafruit\_bitmap\_font
--   adafruit\_bus\_device
--   adafruit\_display\_shapes
--   adafruit\_display\_text
--   adafruit\_epd
--   adafruit\_imageload
--   adafruit\_io
--   adafruit\_magtag
--   adafruit\_minimqtt
--   adafruit\_portalbase
--   adafruit\_connection\_manager.mpy
--   adafruit\_fakerequests.mpy
--   adafruit\_il0373.mpy
--   adafruit\_ntp.mpy
--   adafruit\_requests.mpy
--   adafruit\_ticks.mpy
--   neopixel.mpy
--   simpleio.mpy
-
-Copy and paste these folders and files from the latest CircuitPython 10.0.2 installation bundle into the `CIRCUITPY` device’s `/lib` folder.
-
 ### Installing Project Files
 
-To install the habit tracker, download the `/lib/` folder and the `code.py` file from the repository and save them to the root of your `CIRCUITPY` device. All of the required libraries are included.
+To install the habit tracker, download the `/lib` folder and the `code.py` file from the repository and save them to the root of your `CIRCUITPY` device. All of the required libraries are already included.
+> Note: Several libraries related to Adafruit IO are required in order to use NTP for Wi-Fi syncing, although Adafruit IO is not actually called by the code.
 
 ## Configuring the Habit Tracker
 
@@ -92,8 +66,6 @@ secrets = {
  2.  In the `password` field, enter your Wi-Fi password.
  3. Optionally, in the `timezone` field, enter the value for your time zone. If no value is entered, the default UTC is used.
 Time zone values can be found on [this page](https://timeapi.io/documentation/iana-timezones). 
- 4. List item
-
 a. Copy and paste the **IANA Time Zone** value for your time zone. For example, `America/New_York`. 
 
 > Note: If the `secrets.py` file is not created, Wi-Fi syncing will not be enabled. To advance each day, you must hold down the D button for about 1.5 seconds.
@@ -171,7 +143,7 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3Nzk5NTk2MCwxMTU3Mjk3MjAsNTQ2OT
+eyJoaXN0b3J5IjpbLTkzMTU0NDk1OSwxMTU3Mjk3MjAsNTQ2OT
 gxODcxLC0xNDI2MDQ3OTM5LC0xNzg2ODQyMTQzLC0xNzYwMDI0
 NDEyXX0=
 -->

@@ -90,7 +90,8 @@ secrets = {
 
 3.  In the `ssid` field, enter your Wi-Fi name.
 4.  In the `password` field, enter your Wi-Fi password.
-5. In the timezone field, enter the value for your time zone. Time zone values can be found on [this page](https://timeapi.io/documentation/iana-timezones).
+5. In the timezone field, enter the value for your time zone. 
+Time zone values can be found on [this page](https://timeapi.io/documentation/iana-timezones). Copy and paste the **IANA Time Zone** value for your time zone. For example, America/New_York.
 
 > Note: If this file is not created, Wi-Fi syncing will not be enabled. To advance each day, you must hold down the D button for about 1.5 seconds.
 
@@ -180,6 +181,6 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1Nzc2NDM1LC0xNzg2ODQyMTQzLC0xNz
-YwMDI0NDEyXX0=
+eyJoaXN0b3J5IjpbLTE3Mjc3NDQ0NjksLTE3ODY4NDIxNDMsLT
+E3NjAwMjQ0MTJdfQ==
 -->

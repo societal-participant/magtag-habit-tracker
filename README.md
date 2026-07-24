@@ -164,10 +164,10 @@ This is only necessary when the habit tracker isn’t configured to sync with Wi
 
 ### Resetting the Habit Tracker
 
-To reset the habit tracker daily streaks back to 0, press and hold all four **A**, **B**, **C**, and **D** buttons for approximately 1.5 seconds. After the screen resets, the daily streaks are cleared.
+To reset the habit tracker daily streaks back to 0, press and hold all four **A**, **B**, **C**, and **D** buttons for approximately 1.5 seconds. The habit tracker flashes red lights and plays a sound. After the screen resets, the daily streaks are cleared.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg5MzQ0MzAsLTE3ODY4NDIxNDMsLT
-E3NjAwMjQ0MTJdfQ==
+eyJoaXN0b3J5IjpbMjA4NTY3NDUzOSwtMTc4Njg0MjE0MywtMT
+c2MDAyNDQxMl19
 -->

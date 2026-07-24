@@ -67,7 +67,7 @@ secrets = {
 Time zone values can be found on [this page](https://timeapi.io/documentation/iana-timezones). 
 a. Copy and paste the **IANA Time Zone** value for your time zone. For example, `America/New_York`. 
 
-> Note: If the `secrets.py` file is not created, Wi-Fi syncing will not be enabled. To advance each day, you must hold down the D button for about 1.5 seconds.
+> Note: If the `secrets.py` file is not created, Wi-Fi syncing will not be enabled. In order to advance each day, you must long-press the D button.
 
 ### Configuring Sound Volume
 
@@ -79,6 +79,7 @@ To change the volume of the sounds played by the habit tracker, do the following
 ### Configuring Habits
 
 There are five preconfigured habits that you can change. You can also remove or add more habits so there are more or less than five. It is recommended to not add more than 6 habits due to the screen size.  
+
 To edit the habits:
 
 1.  Find the `HABITS` setting:
@@ -103,6 +104,8 @@ HABITS = ["Take Vitamins", "Drink Water", "Exercise", "Stretch"]
 ## Using the Habit Tracker
 
 The following topics explain how to use the habit tracker.
+
+When pressing the buttons, it's important to consider the e-ink screen refresh rate. For example, if you press a button too soon 
 
 ### Turning It On
 
@@ -142,7 +145,7 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNTgzODA4MiwtOTMxNTQ0OTU5LDExNT
+eyJoaXN0b3J5IjpbLTk4NDUwNDAzNywtOTMxNTQ0OTU5LDExNT
 cyOTcyMCw1NDY5ODE4NzEsLTE0MjYwNDc5MzksLTE3ODY4NDIx
 NDMsLTE3NjAwMjQ0MTJdfQ==
 -->

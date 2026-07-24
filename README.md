@@ -32,7 +32,7 @@ The habit tracker was written using CircuitPython 10.0.2 and is supported on Mag
 
 > Note: This habit tracker has not been tested on pre-2025 MagTags.
 
-Prior to installing the habit tracker, CircuitPython 10.0.2 must be installed on your MagTag.
+Prior to installing the habit tracker, CircuitPython 10.0.2 must be installed on your MagTag. See [Adafruit's page on installing CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython) for information.
 
 ### Installing Required Libraries
 
@@ -178,6 +178,6 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODY4NDIxNDMsLTE3NjAwMjQ0MTJdfQ
-==
+eyJoaXN0b3J5IjpbMjA1NzQ4MzUxLC0xNzg2ODQyMTQzLC0xNz
+YwMDI0NDEyXX0=
 -->

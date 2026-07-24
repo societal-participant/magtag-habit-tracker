@@ -10,7 +10,7 @@ Onboard hardware:
   - 4 NeoPixels (feedback flash + daily progress)
   - Piezo speaker (feedback tones)
   - E-ink display (custom drawn UI)
-  - Built-in WiFi (ESP32-S2) for optional date sync via NTP
+  - Built-in WiFi (ESP32-S2) for optional date sync via timeapi.io
 
 Controls:
   Button A - Manual refresh / re-sync time
@@ -30,21 +30,22 @@ Library Bundle), copied into /lib:
   adafruit_bitmap_font, adafruit_bus_device, adafruit_display_shapes,
   adafruit_display_text, adafruit_epd, adafruit_imageload, adafruit_io,
   adafruit_magtag, adafruit_minimqtt, adafruit_portalbase, adafruit_connection_manager.mpy,
-  adafruit_fakerequests.mpy, adafruit_il0373.mpy, adafruit_ntp.mpy, adafruit_requests.mpy,
+  adafruit_fakerequests.mpy, adafruit_il0373.mpy, adafruit_requests.mpy,
   adafruit_ticks.mpy, neopixel.mpy, simpleio.mpy
 
 
-Note: date/time sync uses direct NTP (adafruit_ntp), not Adafruit IO, so no
-Adafruit IO account or aio_username/aio_key is needed. The adafruit_io/
-adafruit_minimqtt/adafruit_portalbase libraries above are still required
-only because MagTag() imports them internally, even though this code
-never calls into that part of the library.
+Note: date/time sync calls timeapi.io directly over HTTPS (a free public
+API - no account or API key needed), not Adafruit IO's time service. The
+adafruit_io/adafruit_minimqtt/adafruit_portalbase libraries above are
+still required only because MagTag() imports them internally, even
+though this code never calls into that part of the library.
 
 Optional: create secrets.py on CIRCUITPY with your WiFi credentials to
 enable automatic date-based streak resets:
     secrets = {
         "ssid": "YourWiFiName",
         "password": "YourWiFiPassword",
+        "timezone": "America/New_York",  # optional; see https://timeapi.io/documentation/iana-timezones
     }
 If secrets.py is missing, the tracker still works fully — just use the
 Button D long-press to advance days manually.
@@ -57,18 +58,19 @@ import displayio
 import terminalio
 import board
 import pwmio
+import ssl
 import wifi
-import socketpool
 import rtc
-import adafruit_ntp
+import adafruit_connection_manager
+import adafruit_requests
 from adafruit_display_text import label
 from adafruit_display_shapes.rect import Rect
 from adafruit_magtag.magtag import MagTag
 
-# NTP returns UTC; there's no timezone database on the board, so the local
-# offset is just a fixed number of hours you flip by hand for DST.
-# Eastern time: -4 during EDT (roughly Mar-Nov), -5 during EST.
-TZ_OFFSET_HOURS = 0
+# timeapi.io is a free public API - no account or key needed. It handles
+# DST automatically for whatever IANA timezone name you give it, unlike a
+# fixed manual UTC offset.
+TIMEAPI_URL = "https://timeapi.io/api/time/current/zone"
 
 # magtag.peripherals.play_tone() always uses a 50% PWM duty cycle internally
 # (hardcoded in the simpleio.tone() helper it calls) - that's max volume with
@@ -138,8 +140,12 @@ time_synced = False
 
 
 def try_sync_time():
-    """Attempt WiFi + direct NTP sync (no Adafruit IO account needed).
-    Safe to call even with no secrets.py."""
+    """Attempt to fetch the current local time from timeapi.io - a free
+    public API, no account or key needed. Uses the IANA timezone name
+    from secrets.py's optional 'timezone' key (e.g. "America/New_York",
+    see https://timeapi.io/documentation/iana-timezones); defaults to UTC
+    if omitted. timeapi.io applies DST for the given zone automatically.
+    Safe to call even with no secrets.py at all."""
     global time_synced
     try:
         import secrets  # noqa: F401  (presence implies WiFi is configured)
@@ -148,9 +154,22 @@ def try_sync_time():
     try:
         if not wifi.radio.connected:
             wifi.radio.connect(secrets.secrets["ssid"], secrets.secrets["password"])
-        pool = socketpool.SocketPool(wifi.radio)
-        ntp = adafruit_ntp.NTP(pool, tz_offset=TZ_OFFSET_HOURS)
-        rtc.RTC().datetime = ntp.datetime
+        pool = adafruit_connection_manager.get_radio_socketpool(wifi.radio)
+        ssl_context = adafruit_connection_manager.get_radio_ssl_context(wifi.radio)
+        session = adafruit_requests.Session(pool, ssl_context)
+
+        tz = secrets.secrets.get("timezone", "UTC")
+        response = session.get("{}?timeZone={}".format(TIMEAPI_URL, tz))
+        try:
+            data = response.json()
+        finally:
+            response.close()
+
+        rtc.RTC().datetime = time.struct_time((
+            data["year"], data["month"], data["day"],
+            data["hour"], data["minute"], data["seconds"],
+            -1, -1, -1,
+        ))
         time_synced = True
         return True
     except Exception as e:  # broad on purpose: many failure modes here

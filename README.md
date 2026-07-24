@@ -63,7 +63,7 @@ Copy and paste these folders and files from the latest CircuitPython 10.0.2 inst
 
 ### Installing Project Files
 
-To install the habit tracker, download the `/lib/` folder and the `code.py` file from the repository and save them to the root of your `CIRCUITPY` device.
+To install the habit tracker, download the `/lib/` folder and the `code.py` file from the repository and save them to the root of your `CIRCUITPY` device. All of the required libraries are included.
 
 ## Configuring the Habit Tracker
 
@@ -168,6 +168,6 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ2OTgxODcxLC0xNDI2MDQ3OTM5LC0xNz
-g2ODQyMTQzLC0xNzYwMDI0NDEyXX0=
+eyJoaXN0b3J5IjpbMTE1NzI5NzIwLDU0Njk4MTg3MSwtMTQyNj
+A0NzkzOSwtMTc4Njg0MjE0MywtMTc2MDAyNDQxMl19
 -->

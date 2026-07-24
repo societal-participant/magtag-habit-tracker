@@ -40,12 +40,11 @@ To install the habit tracker, download the `/lib` folder and the `code.py` file 
 > Note: Several libraries related to Adafruit IO are required in order to use NTP for Wi-Fi syncing, although Adafruit IO is not actually called by the code.
 
 ## Configuring the Habit Tracker
+The habit tracker is configured by editing values in `code.py`.
 
 To configure the habit tracker, open `code.py` in a CircuitPython editor, such as [Mu](https://codewith.mu/en/download).
 
-The habit tracker is configured by editing values in `code.py`.
-
-Optionally, `secrets.py` can be created and configured to enable Wi-Fi syncing of the date and time. See the following section.
+Optionally, a `secrets.py` file can be created and configured to enable Wi-Fi syncing of the date and time. See the following section.
 
 ### Configuring Wi-Fi Date and Time Sync
 
@@ -143,7 +142,7 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTU0NDk1OSwxMTU3Mjk3MjAsNTQ2OT
-gxODcxLC0xNDI2MDQ3OTM5LC0xNzg2ODQyMTQzLC0xNzYwMDI0
-NDEyXX0=
+eyJoaXN0b3J5IjpbMTczNTgzODA4MiwtOTMxNTQ0OTU5LDExNT
+cyOTcyMCw1NDY5ODE4NzEsLTE0MjYwNDc5MzksLTE3ODY4NDIx
+NDMsLTE3NjAwMjQ0MTJdfQ==
 -->

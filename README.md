@@ -71,7 +71,7 @@ To configure the habit tracker, open `code.py` in a CircuitPython editor, such a
 
 The habit tracker is configured by editing values in `code.py`.
 
-Optionally, `secrets.py` can be configured to enable Wi-Fi syncing of the date and time. See the following section.
+Optionally, `secrets.py` can be created and configured to enable Wi-Fi syncing of the date and time. See the following section.
 
 ### Configuring Wi-Fi Date and Time Sync
 
@@ -84,6 +84,7 @@ To enable Wi-Fi date and time sync, do the following:
 secrets = {
     "ssid": "YourWiFiName",
     "password": "YourWiFiPassword",
+    "": "",
 }
 ```
 
@@ -178,6 +179,6 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NzQ4MzUxLC0xNzg2ODQyMTQzLC0xNz
-YwMDI0NDEyXX0=
+eyJoaXN0b3J5IjpbLTE0MTAwODk3NzgsLTE3ODY4NDIxNDMsLT
+E3NjAwMjQ0MTJdfQ==
 -->

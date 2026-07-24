@@ -10,7 +10,7 @@ This habit tracker is designed to track 5 daily habits that you want to keep tra
 
 It also uses Wi-Fi to synchronize the date and time to track daily streaks for each habit. No Adafruit IO account is needed.
 
-As you complete your daily habits, the MagTag lights a blue light for each completed habit to indicate your progress. When you complete all of your daily habits, the blue lights all turn to gold to help boost your feeling of success for the day. Each habit also has a daily streak counter for even more fun.
+As you complete your daily habits, the MagTag lights a blue light to indicate your progress. When you complete all of your daily habits, the blue lights all turn to gold to help boost your feeling of success for the day. Each habit also has a daily streak counter for even more fun.
 
 ### Required Parts
 
@@ -145,7 +145,7 @@ To reset the habit tracker daily streaks back to 0, press and hold all four **A*
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY3NDIzMjksLTkzMTU0NDk1OSwxMTU3Mj
-k3MjAsNTQ2OTgxODcxLC0xNDI2MDQ3OTM5LC0xNzg2ODQyMTQz
-LC0xNzYwMDI0NDEyXX0=
+eyJoaXN0b3J5IjpbLTMyNzUxMjM4MCw1Njc0MjMyOSwtOTMxNT
+Q0OTU5LDExNTcyOTcyMCw1NDY5ODE4NzEsLTE0MjYwNDc5Mzks
+LTE3ODY4NDIxNDMsLTE3NjAwMjQ0MTJdfQ==
 -->
